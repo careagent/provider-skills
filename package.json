@@ -1,0 +1,32 @@
+{
+  "name": "@careagent/provider-skills",
+  "version": "0.1.0",
+  "description": "Credential-gated clinical skills registry for provider CareAgents",
+  "type": "module",
+  "main": "dist/index.mjs",
+  "types": "dist/index.d.mts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.mts"
+    }
+  },
+  "scripts": {
+    "build": "tsdown src/index.ts --dts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "@sinclair/typebox": "~0.34.0",
+    "tsdown": "~0.20.0",
+    "typescript": "~5.7.0",
+    "vitest": "~4.0.0"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "license": "Apache-2.0"
+}
